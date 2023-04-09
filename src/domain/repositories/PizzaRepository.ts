@@ -1,6 +1,7 @@
 import Pizza from "src/domain/entities/Pizza";
 
 export default interface PizzaRepository {
-    create(): Pizza,
-    getByName(name: string): Pizza
+    create(): Promise<Pizza>,
+    getByName(name: string): Promise<Pizza>,
+    getAll(): Promise<Pizza[]>
 }

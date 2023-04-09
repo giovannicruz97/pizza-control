@@ -1,3 +1,4 @@
+import Dinero from "dinero.js";
 import { Item, Pizza, Order } from "src/domain/entities";
 
 describe("Order", () => {
@@ -14,7 +15,7 @@ describe("Order", () => {
     describe("getTotalPrice", () => {
         it("should return 0 when the order has no items", () => {
             const order = new Order([]);
-            expect(order.getTotalPrice()).toBe(0);
+            expect(order.getTotalPrice().getAmount()).toEqual(Dinero({ amount: 0, currency: "BRL" }).getAmount());
         });
 
         it("should return the correct total price when the order has items", () => {
@@ -22,7 +23,7 @@ describe("Order", () => {
             const item1 = new Item(pizza, 1);
             const item2 = new Item(pizza, 1);
             const order = new Order([item1, item2]);
-            expect(order.getTotalPrice()).toBe(16);
+            expect(order.getTotalPrice().getAmount()).toEqual(Dinero({ amount: 16, currency: "BRL" }).getAmount());
         });
     });
 });
