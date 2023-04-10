@@ -12,4 +12,6 @@ export default class Order {
     public getTotalPrice(): Dinero.Dinero {
         return this.items.reduce((total, item) => total.add(item.getPizza().getPrice()), Dinero({ amount: 0, currency: "BRL" }));
     }
+
+    public getId() { return this.id }
 }

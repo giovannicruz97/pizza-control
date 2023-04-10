@@ -14,7 +14,8 @@
       "tests/*": [
         "__tests__/*"
       ]
-    }
+    },
+    "useUnknownInCatchVariables": false
   },
   "include": [
     "./src"
