@@ -18,6 +18,7 @@
   "homepage": "https://github.com/giovannicruz97/pizza-control#readme",
   "devDependencies": {
     "@types/dinero.js": "^1.9.0",
+    "@types/express": "^4.17.17",
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.11",
     "@types/uuid": "^9.0.1",
@@ -28,6 +29,8 @@
   },
   "dependencies": {
     "dinero.js": "^1.9.1",
+    "express": "^4.18.2",
+    "http-status-codes": "^2.2.0",
     "uuid": "^9.0.0"
   }
 }
